@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/segment7" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loading">
+            <span class="fa fa-spinner fa-spin"></span>
+            <h1 class="animated bounceIn infinite">wait a minute</h1>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="navbar">
+            <div class="nav-mask"></div>
+            <ul class="nav-menu">
+                <li class="nav-toggle"><i class="fa fa-arrow-left"></i></li>
+                <li><a class="nav-link" href="#home">home</a></li>
+                <li><a class="nav-link" href="#about">about</a></li>
+                <li><a class="nav-link" href="#skill"></a>skill</li>
+                <li><a class="nav-link" href="#calculator">calculator</a></li>
+                <li><a class="nav-link" href="#contact"></a>contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="banner">
+        <img src="https://lh3.googleusercontent.com/pw/AL9nZEUofx_kb6KS5ZOhnZv2QZWvOy0Gv-XqypvlnpDDjb_P94A-bL2oMnqme57fEQ6fRZrcUmudhqHoHqw4bbpRjVyKXr-hc_Byt7Rnv_7AqAg0H-Sc1JRxRSU7-5yRw12KBfZt9n070azsfvS9taeoF8RZ=w408-h860-no?authuser=0" alt="kushala profile photo" style="width:150px">
+        <h1>Hello 👋, I'm <span style="color:blue">Kushala Manjunath Gowda</span></h1>
+        <p>web developer</p>
+    </section>
+
+    <section id="about" class="about wow fadeInUp slow">
+        <h2>I'm <big style="color:white">18 Years old</big></h2>
+        <p class="summary">
+            <span class="info">I'm pursuing <i class="point">CSE</i> from Sambhram Institute of Technology, Bangalore.</span>
+            <span class="info">I'm a tech <i class="point">enthusiast</i> and <span class="point-light">passionate learner</span><br></span>
+            <span class="info">My hobbies are <span class="point-light">coding,</span> <span class="point-light">painting.</span><br></span>
+            <span class="info">I live in <span class="point-light">Bangalore, Karnataka.</span></span>
+        </p>
+    </section>
+
+    <section id="skill" class="skill wow fadeIn slower">
+        <h2>My Skills</h2>
+        <ul id="ul-square">
+            <li style="color:red"><h3 style="color:white" align="left">HTML</h3></li>
+            <li style="color:red"><h3 style="color:white" align="left">CSS</h3></li>
+            <li style="color:red"><h3 style="color:white" align="left">JavaScript</h3></li>
+            <li style="color:red"><h3 style="color:white" align="left">python</h3></li>
+            <li style="color:red"><h3 style="color:white" align="left">SQL</h3></li>
+            <li style="color:red"><h3 style="color:white" align="left">front_end</h3></li>
+        </ul>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <h2>Calculator</h2>
+        <div class="main">
+            <form name="form">
+                <input class="textview" name="textview" placeholder="0" style="overflow: scroll;" disabled>
+            </form>
+            <table>
+                <tr>
+                    <td>
+                        <div class="button" id="clean" onclick="clean()"><div class="inner">C</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="back()"><div class="inner"><img alt="←" id="img" src="https://www.dropbox.com/s/2jmv326a6rdvijq/Clear.png?raw=1"></div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="opt('/')"><div class="inner">÷</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="opt('*')"><div class="inner">×</div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(7)"><div class="inner">7</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(8)"><div class="inner">8</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(9)"><div class="inner">9</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="opt('-')"><div class="inner">-</div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(4)"><div class="inner">4</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(5)"><div class="inner">5</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(6)"><div class="inner">6</div></div>
+                    </td>
+                    <td rowspan="2" id="plus">
+                        <div id="first" class="button none" onclick="opt('+')"><div class="inner">+</div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert(1)"><div class="inner">1</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(2)"><div class="inner">2</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert(3)"><div class="inner">3</div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="zero" class="button none" onclick="zero()"><div class="inner">0</div></div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="insert('.')"><div class="inner">.</div></div>
+                    </td>
+                    <td colspan="2" id="equal">
+                        <div id="second" class="button none" onclick="equal()"><div class="inner">=</div></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer id="contact" class="contact wow fadeInUp slow">
+        <h2>Contact</h2>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <span class="info">Email: </span>kushalamgowda0@gmail.com
+        </div>
+        <div>
+            <i class="fa fa-github"></i>
+            <span class="info">GitHub: </span>
+            <a href="https://github.com/kushalamgowda">https://github.com/kushalamgowda</a>
+        </div>
+    </footer>
+</body>
+<script src="calculator.js"></script>
+<script>
+$(document).ready(function() {
+    $(".preloader").fadeOut(1000, function() {
+        $(".navbar").fadeIn(1000);
+    });
+
+    $(".nav-icon, .nav-toggle").click(function() {
+        $(".navbar").toggleClass("open");
+    });
+
+    $(".nav-link").click(function() {
+        $(".navbar").removeClass("open");
+    });
+
+    new WOW().init();
+});
+</script>
+    <section id="home" class="banner wow bounceIn">
+        <img src="https://lh3.googleusercontent.com/pw/AL9nZEUofx_kb6KS5ZOhnZv2QZWvOy0Gv-XqypvlnpDDjb_P94A-bL2oMnqme57fEQ6fRZrcUmudhqHoHqw4bbpRjVyKXr-hc_Byt7Rnv_7AqAg0H-Sc1JRxRSU7-5yRw12KBfZt9n070azsfvS9taeoF8RZ=w408-h860-no?authuser=0" alt="kushala profile photo" style="width:150px">
+        <h1 class="wow fadeIn" data-wow-delay="1s">Hello 👋, I'm <span style="color:blue">Kushala Manjunath Gowda</span></h1>
+        <p class="wow fadeIn" data-wow-delay="2s">web developer</p>
+    </section>
+    
+    <section id="about" class="about wow fadeInUp slow">
+        <h2 class="wow fadeIn" data-wow-delay="0.5s">I'm <big style="color:white">18 Years old</big></h2>
+        <p class="summary">
+            <span class="info wow fadeIn" data-wow-delay="1s">I'm pursuing <i class="point">CSE</i> from Sambhram Institute of Technology, Bangalore.</span>
+            <span class="info wow fadeIn" data-wow-delay="1.5s">I'm a tech <i class="point">enthusiast</i> and <span class="point-light">passionate learner</span><br></span>
+            <span class="info wow fadeIn" data-wow-delay="2s">My hobbies are <span class="point-light">coding,</span> <span class="point-light">painting.</span><br></span>
+            <span class="info wow fadeIn" data-wow-delay="2.5s">I live in <span class="point-light">Bangalore, Karnataka.</span></span>
+        </p>
+    </section>
+    
+    <section id="skill" class="skill wow fadeIn slower">
+        <h2 class="wow fadeIn" data-wow-delay="0.5s">My Skills</h2>
+        <ul id="ul-square">
+            <li class="wow fadeInLeft" data-wow-delay="1s" style="color:red"><h3 style="color:white" align="left">HTML</h3></li>
+            <li class="wow fadeInLeft" data-wow-delay="1.5s" style="color:red"><h3 style="color:white" align="left">CSS</h3></li>
+            <li class="wow fadeInLeft" data-wow-delay="2s" style="color:red"><h3 style="color:white" align="left">JavaScript</h3></li>
+            <li class="wow fadeInLeft" data-wow-delay="2.5s" style="color:red"><h3 style="color:white" align="left">C, C++</h3></li>
+        </ul>
+    </section>
+    
+    <section id="calculator" class="calculator wow fadeInUp">
+        <h2 class="wow fadeIn" data-wow-delay="0.5s">Calculator</h2>
+        <div class="main">
+            <form name="form">
+                <input class="textview" name="textview" placeholder="0" style="overflow: scroll;" disabled>
+            </form>
+            <table>
+                <tr>
+                    <td><div class="button" id="clean" onclick="clean()"><div class="inner">C</div></div></td>
+                    <td><div class="button none" onclick="back()"><div class="inner"><img alt="←" id="img" src="https://www.dropbox.com/s/2jmv326a6rdvijq/Clear.png?raw=1"></div></div></td>
+                    <td><div class="button none" onclick="opt('/')"><div class="inner">÷</div></div></td>
+                    <td><div class="button none" onclick="opt('*')"><div class="inner">×</div></div></td>
+                </tr>
+                <tr>
+                    <td><div class="button none" onclick="insert(7)"><div class="inner">7</div></div></td>
+                    <td><div class="button none" onclick="insert(8)"><div class="inner">8</div></div></td>
+                    <td><div class="button none" onclick="insert(9)"><div class="inner">9</div></div></td>
+                    <td><div class="button none" onclick="opt('-')"><div class="inner">-</div></div></td>
+                </tr>
+                <tr>
+                    <td><div class="button none" onclick="insert(4)"><div class="inner">4</div></div></td>
+                    <td><div class="button none" onclick="insert(5)"><div class="inner">5</div></div></td>
+                    <td><div class="button none" onclick="insert(6)"><div class="inner">6</div></div></td>
+                    <td rowspan="2" id="plus"><div id="first" class="button none" onclick="opt('+')"><div class="inner">+</div></div></td>
+                </tr>
+                <tr>
+                    <td><div class="button none" onclick="insert(1)"><div class="inner">1</div></div></td>
+                    <td><div class="button none" onclick="insert(2)"><div class="inner">2</div></div></td>
+                    <td><div class="button none" onclick="insert(3)"><div class="inner">3</div></div></td>
+                </tr>
+                <tr>
+                    <td><div id="zero" class="button none" onclick="zero()"><div class="inner">0</div></div></td>
+                    <td><div class="button none" onclick="insert('.')"><div class="inner">.</div></div></td>
+                    <td colspan="2" id="equal"><div id="second" class="button none" onclick="equal()"><div class="inner">=</div></div></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <footer id="contact" class="contact wow fadeInUp slow">
+        <h2>Contact</h2>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <span class="info">Email: </span>kushalamgowda0@gmail.com
+        </div>
+        <div>
+            <i class="fa fa-github"></i>
+            <span class="info">GitHub: </span><a href="https://github.com/kushalamgowda">https://github.com/kushalamgowda</a>
+        </div>
+    </footer>
+        <section id="vr-room" class="vr-room">
+            <h2>VR Collaboration Room</h2>
+            <a-scene embedded>
+                <a-box position="0 2 -5" rotation="0 45 0" color="#4CC3D9"></a-box>
+                <a-sphere position="2 2 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+                <a-cylinder position="-2 2 -5" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+                <a-plane position="0 0 -5" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+                <a-sky color="#ECECEC"></a-sky>
+            </a-scene>
+        </section>
+        <section id="vr-room" class="vr-room">
+            <h2>VR Collaboration Room</h2>
+            <a-scene embedded>
+                <!-- Ground -->
+                <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#7BC8A4"></a-plane>
+        
+                <!-- Sky -->
+                <a-sky color="#ECECEC"></a-sky>
+        
+                <!-- Objects -->
+                <a-box position="0 1 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+                <a-sphere position="2 1 -3" radius="1" color="#EF2D5E"></a-sphere>
+                <a-cylinder position="-2 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+                
+                <!-- Text -->
+                <a-text value="Welcome to the VR Room" align="center" position="0 2.5 -3" color="#000000"></a-text>
+                
+                <!-- Interactions -->
+                <a-entity position="0 1.6 -2">
+                    <a-camera>
+                        <a-cursor></a-cursor>
+                    </a-camera>
+                </a-entity>
+            </a-scene>
+        </section>
+        
+        
+    
+        <script src="script.js"></script>
+    </body>
+     
+</html>
